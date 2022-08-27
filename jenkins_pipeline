@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'I am in Build Phase'
+                sh 'ifconfig'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                echo 'I am in Test Phase'
+                sh 'hostname'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                echo 'I am in Deploy Phase'
+                sh 'pwd'
+            }
+        }
+    }
+}
